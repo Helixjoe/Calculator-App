@@ -1,0 +1,22 @@
+h1 {
+  padding-top: 200px;
+  font-size: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inputs {
+  display: flex;
+  justify-content: center;
+}
+
+input {
+  margin-left: 20px;
+}
+
+.submitt {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
