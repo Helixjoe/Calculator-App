@@ -1,9 +1,12 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
+app.listen(3000, function () {
+  console.log("Server Started");
+});
 
 app.use(bodyParser.urlencoded({ extended: true }));
-
+//Regular Calculator
 app.get("/", function (req, res) {
   res.sendFile(__dirname + "/index.html");
 });
@@ -14,7 +17,12 @@ app.post("/", function (req, res) {
 
   res.send("Thank you for trying!. Result is " + (num1 + num2));
 });
+// BMI Calculator
+app.get("/bmiCalculator", function (req, res) {
+  res.sendFile(__dirname + "/bmiCalculator.html");
+});
 
-app.listen(3000, function () {
-  console.log("Server Started");
+app.post("/bmiCalculator", function (req, res) {
+  let height = Number(req.body.height);
+  let weight = Number(req.body.weight);
 });
