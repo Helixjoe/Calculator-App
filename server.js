@@ -25,4 +25,6 @@ app.get("/bmiCalculator", function (req, res) {
 app.post("/bmiCalculator", function (req, res) {
   let height = Number(req.body.height);
   let weight = Number(req.body.weight);
+
+  res.send("BMI Calculated is " + weight / (height * height));
 });
