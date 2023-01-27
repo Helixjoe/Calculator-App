@@ -18,6 +18,10 @@ app.post("/", function (req, res) {
   res.send("Thank you for trying!. Result is " + (num1 + num2));
 });
 // BMI Calculator
+
+app.get("/styles.css", function (req, res) {
+  res.sendFile(__dirname + "/styles.css");
+});
 app.get("/bmiCalculator", function (req, res) {
   res.sendFile(__dirname + "/bmiCalculator.html");
 });
